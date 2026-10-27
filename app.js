@@ -124,7 +124,7 @@
     app.innerHTML =
       '<div class="card"><div class="step">Step 2</div><h2>Hi, ' + esc(first(name)) + '! 👋</h2>' +
       '<p class="muted">Enter your ID number to confirm it\'s really you.</p>' +
-      '<input type="text" id="id" placeholder="e.g. 2024-0123-T" autocomplete="off" autocapitalize="characters">' +
+      '<input type="text" id="id" placeholder="e.g. 2024-XXXX-T" autocomplete="off" autocapitalize="characters">' +
       '<div class="err" id="err"></div>' +
       '<div class="row"><button class="btn ghost" id="back">← Back</button><button class="btn" id="ok">Confirm</button></div></div>';
     var id = document.getElementById('id'), err = document.getElementById('err'), ok = document.getElementById('ok');
