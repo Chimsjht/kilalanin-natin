@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Adviser Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .wrap { max-width: 1000px; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 16px; }
+    .stat { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px; }
+    .stat .n { font-size: 30px; font-weight: 800; line-height: 1.1; }
+    .stat .l { font-size: 13px; color: var(--muted); font-weight: 700; }
+    .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0 14px; }
+    .tabs button { font: inherit; font-weight: 700; padding: 8px 14px; border-radius: 99px; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+    .tabs button.on { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+    .tbl { overflow-x: auto; }
+    .tag { display: inline-block; font-size: 13px; padding: 1px 8px; border-radius: 99px; margin: 1px 2px 1px 0; background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+    .tag.writing { background: var(--warn-soft); color: var(--ink); }
+    .tag.abandoned, .tag.none { background: var(--brand-soft); color: var(--brand); }
+    .resp { border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; margin-bottom: 10px; background: var(--card); }
+    .resp h3 { margin: 0 0 4px; font-size: 18px; }
+    .setting { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .setting:last-child { border-bottom: 0; }
+    .setting .t { font-weight: 800; }
+    .toggle { flex: none; }
+    select { font: inherit; padding: 8px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="logo">K</div>
+      <h1>Adviser Dashboard</h1>
+      <div class="who"><button class="btn link small" id="reload" hidden>↻ Refresh</button></div>
+    </header>
+    <main id="app"></main>
+  </div>
+  <script src="config.js"></script>
+  <script src="teacher.js"></script>
+</body>
+</html>
